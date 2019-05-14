@@ -31,7 +31,8 @@ def inasistencias
   notas.each do |value_line|
   cont = 0
   value_line.each_with_index do |elem, index|
-  cont += 1 if elem != "A"
+  cont += 1 if elem == "A"
+
   end
   puts "Alumno #{value_line[0]}, #{cont} inasistencias"
   aux_arr[value_line[0]] = cont
